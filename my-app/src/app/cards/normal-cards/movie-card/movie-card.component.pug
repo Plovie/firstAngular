@@ -1,0 +1,7 @@
+div.card(style='width: 100%;')
+    div.card-divider.text-center.align-center
+      p.title {{movie.title}}
+    img(src='http://fr.web.img6.acsta.net/c_215_290/pictures/17/06/08/11/47/366308.jpg')
+    div.card-section
+      h4 {{movie.releaseYear}}
+      p {{movie.synopsis | slice: 0:50 }}

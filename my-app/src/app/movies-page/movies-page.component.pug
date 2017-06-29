@@ -1,0 +1,5 @@
+div.row.main
+  div.row.expanded
+    app-movie-card(*ngFor="let oneMovie of (movies | async) ", [movie]='oneMovie' ).column.medium-3
+
+

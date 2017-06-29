@@ -10,7 +10,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 
 export class AppComponent implements OnInit {
-  title = 'app';
+  title :string= 'app';
 
   ngOnInit(){
 

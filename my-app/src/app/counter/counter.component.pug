@@ -1,0 +1,8 @@
+div(*ngIf="(flag | async)").column.medium-12
+  div.row.expanded
+    div.column.medium-2
+      button(type="button", (click)="addOne()").button.hollow Add
+    div.column.medium-8
+      p {{ count | async }}
+    div.column.medium-2
+      button(type="button", (click)="deleteOne()").button.hollow.warning Delete
