@@ -18,8 +18,8 @@ export class MoviesPageComponent implements OnInit {
   constructor(public moviesService: MoviesService) { }
 
   ngOnInit() {
-    this.movies = this.moviesService.getMovies()
-    this.orderByDate = false;
+    this.movies = this.moviesService.getMovies();
+    this.orderByDate = true;
   }
 
   get order()   { return this.orderByDate ? {order: 'ASC', on: 'releaseYear'} : {order: 'DESC', on: 'releaseYear'} ; }

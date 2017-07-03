@@ -12,7 +12,7 @@ div.row.mainapp
                 input(placeholder="Search a movie", type="text", [(ngModel)]="searchGeneral", )
               div.colum.medium-12.search-result(*ngIf="searchGeneral")
                 div.row.expanded
-                  app-small-movie-card(*ngFor="let movie of (movies | async) | movieFilter: searchGeneral | slice:0:5 ", [movie]='movie', (click)="cleanSearch()").column.medium-12
+                  app-small-movie-card(*ngFor="let movie of (movies | async) | movieFilterAll: searchGeneral | slice:0:5 ", [movie]='movie', (click)="cleanSearch()").column.medium-12
       div.column.medium-12
         div.row.expanded.text-center.align-center
           div.column.medium-4

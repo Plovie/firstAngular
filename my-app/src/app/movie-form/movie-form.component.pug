@@ -4,11 +4,12 @@ form((ngSubmit)="onSubmit()", #movieForm="ngForm", *ngIf="!updated && !created")
     input#Title.form-control(type='text', required=true, name="Title", [(ngModel)]="movie.title")
   .form-group
     label(for='releaseYear') Release Year
-    input#releaseYear.form-control(type='text', required=true, name="releaseYear", [(ngModel)]="movie.releaseYear")
+    input#releaseYear.form-control(type='text', required=true, name="releaseYear",[(ngModel)]="movie.releaseYear")
   .form-group
     label(for='Synopsis') Synopsis
     input#Synopsis.form-control(type='text', required='', name="Synopsis", [(ngModel)]="movie.synopsis")
   .form-group
+
     label(for='Directors') directors
     input#Directors.form-control(type='text', required='', name="Directors", [(ngModel)]="movie.directors")
   .form-group

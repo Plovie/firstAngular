@@ -5,7 +5,8 @@ import { Pipe } from '@angular/core';
 })
 export class OrderByPipe {
   transform(array: Array<string>, args: {order: string, on: string} ): Array<string> {
-    if (args === null) {
+    console.log(array);
+    if (!array) {
       return array;
     }
 
