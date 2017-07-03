@@ -1,0 +1,15 @@
+.search-content{
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: .375rem;
+  height: 84px;
+}
+
+img {
+  width: 3.3125rem;
+  margin-right: .25rem;
+}
+
+.autocomplete-result-title {
+  font-size: 0.8rem;
+}

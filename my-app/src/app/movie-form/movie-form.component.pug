@@ -1,0 +1,38 @@
+form((ngSubmit)="onSubmit()", #movieForm="ngForm", *ngIf="!updated && !created")
+  .form-group
+    label(for='Title') Title
+    input#Title.form-control(type='text', required=true, name="Title", [(ngModel)]="movie.title")
+  .form-group
+    label(for='releaseYear') Release Year
+    input#releaseYear.form-control(type='text', required=true, name="releaseYear", [(ngModel)]="movie.releaseYear")
+  .form-group
+    label(for='Synopsis') Synopsis
+    input#Synopsis.form-control(type='text', required='', name="Synopsis", [(ngModel)]="movie.synopsis")
+  .form-group
+    label(for='Directors') directors
+    input#Directors.form-control(type='text', required='', name="Directors", [(ngModel)]="movie.directors")
+  .form-group
+    label(for='actors') actors
+    input#actors.form-control(type='text', required='', name="actors", [(ngModel)]="movie.actors")
+  .form-group
+    label(for='category') Category
+    input#category.form-control(type='text', required='',name="category", [(ngModel)]="movie.category")
+  .form-group
+    label(for='poster') Poster
+    input#poster.form-control(type='text',required='',name="poster", [(ngModel)]="movie.poster")
+  .form-group
+    label(for='price') Price
+    input#price.form-control(type='number',required='',name="price", [(ngModel)]="movie.price")
+  .form-group
+    label(for='rate') Rate
+    input#rate.form-control(type='number',required='',name="rate", [(ngModel)]="movie.rate")
+  .form-group
+    label(for='lastViewDate') Release Year
+    input#lastViewDate.form-control(type='text', required='', name="lastViewDate", [(ngModel)]="movie.lastViewDate")
+  button(type="submit", class="btn btn-success", [disabled]="!movieForm.form.valid").button.hollow.success Submit
+div.row(*ngIf="created")
+  div.column.medium-12.text-center
+    p.callout.success Your Movie has been created
+div.row(*ngIf="updated")
+  div.column.medium-12.text-center
+    p.callout.success Your Movie has been updated

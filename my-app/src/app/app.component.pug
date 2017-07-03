@@ -1,14 +1,30 @@
-div.top-bar
-  div.top-bar-left
-    ul.dropdown.menu(data-dropdown-menu='')
-      li.menu-text Site Title
-      li
-        a(routerLink="", routerLinkActive="active") Home
-      li
-        a(routerLink="movies", routerLinkActive="active") Movies
-      li
-        a(routerLink="users", routerLinkActive="active") Users
-router-outlet
+div.row.mainapp
+  div.column.medium-12.top-bar-homemade
+    div.row.expanded
+      div.column.medium-12
+        div.row.expanded.nav-top
+          div.column.medium-3
+            ul.menu
+              li.menu-text DoDoCine
+          div.column.medium-5
+            div.row
+              div.column.medium-12
+                input(placeholder="Search a movie", type="text", [(ngModel)]="searchGeneral", )
+              div.colum.medium-12.search-result(*ngIf="searchGeneral")
+                div.row.expanded
+                  app-small-movie-card(*ngFor="let movie of (movies | async) | movieFilter: searchGeneral | slice:0:5 ", [movie]='movie', (click)="cleanSearch()").column.medium-12
+      div.column.medium-12
+        div.row.expanded.text-center.align-center
+          div.column.medium-4
+            ul.menu
+              li
+                a(routerLink="", routerLinkActive="active") Home
+              li
+                a(routerLink="movies", routerLinkActive="active") Movies
+              li
+                a(routerLink="users", routerLinkActive="active") Users
+  div.column.medium-12
+    router-outlet.row.expanded
 
 
 

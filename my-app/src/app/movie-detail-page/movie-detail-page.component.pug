@@ -1,0 +1,32 @@
+div.column.medium-12(*ngIf="movie && !deleted")
+  div.row.main
+    div.column.medium-12
+      a(routerLink="/movies", routerLinkActive="active") /movie
+       // img(src="",alt="back")
+    div.column.medium-12.text-center
+      h2 {{movie.title}}
+    div.column.medium-12
+      div.row
+        div.column.medium-5.text-center
+          img(src="http://www.le-pacte.com/typo3temp/pics/b8eaaf9cc1.jpg")
+        div.column.medium-7.text-justify
+          p
+            span Release Year :
+            | {{movie.releaseYear}}
+          p
+            span Directors :
+            | {{movie.directors}}
+          p
+            span Actors :
+            | {{movie.actors}}
+          p
+            span Synopsis :
+            | {{movie.synopsis}}
+          div.row.expanded.action.align-center
+            div.column.medium-2
+              button((click)="deleteMovie(movie.id)").button.hollow.alert Delete
+            div.column.medium-2
+              a([routerLink]="['/movies/update', movie.id]").button.hollow.warning Update
+div.column.medium-12.text-center(*ngIf="deleted")
+  p.callout.success Your Movie has been deleted
+

@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MovieDetailPageComponent } from './movie-detail-page.component';
 
-describe('MovieDetailPageComponent', () => {
-  let component: MovieDetailPageComponent;
-  let fixture: ComponentFixture<MovieDetailPageComponent>;
+import { SmallMovieCardComponent } from './small-movie-card.component';
+
+describe('SmallMovieCardComponent', () => {
+  let component: SmallMovieCardComponent;
+  let fixture: ComponentFixture<SmallMovieCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieDetailPageComponent ]
+      declarations: [ SmallMovieCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MovieDetailPageComponent);
+    fixture = TestBed.createComponent(SmallMovieCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,3 +1,40 @@
 .card-divider {
   color:red;
 }
+
+.mainapp {
+  background: white;
+  min-height: 100%;
+}
+
+.top-bar-homemade{
+  max-height: 104px;
+  background-color: #3fb0ac;
+  overflow: auto;
+
+}
+
+.top-bar-homemade a{
+  color: #173e43;
+}
+
+.menu-text{
+  color: #fae596;
+  text-shadow: 1px 1px 2px #173e43;
+}
+.nav-top {
+  margin-top: 10px;
+}
+
+.search-result{
+position: absolute;
+  z-index: 1000;
+  background-color: white;
+  width: 344px;
+  margin-top:39px;
+  margin-left: 15px;
+}
+
+app-small-movie-card:hover {
+  background-color: #b3d4fc;
+}

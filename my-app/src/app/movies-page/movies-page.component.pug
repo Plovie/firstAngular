@@ -1,5 +1,17 @@
-div.row.main
-  div.row.expanded
-    app-movie-card(*ngFor="let oneMovie of (movies | async) ", [movie]='oneMovie' ).column.medium-3
+div.column.medium-12
+  div.row
+    div.column.medium-12
+      a(routerLink = "/new").button.hollow.success Create a Movie
+    div.column.medium-4
+      div.row.expanded
+        div.column.medium-6
+          p Order by release date
+        div.column.medium-6
+          input(type="radio", [(ngModel)]="orderByDate", (click)='toggleOrder()')
+    div.column.medium-8
+      input(type="text", placeholder="Search a movie by its name", [(ngModel)]="search")
+div.column.medium-12
+  div.row.expanded.align-left
+    app-movie-card(*ngFor="let oneMovie of (movies | async) | movieFilter: search | orderBy : order  ", [movie]='oneMovie').column.large-3.medium-4.small-12
 
 
